@@ -40,7 +40,7 @@ export default function SearchFilter() {
         </div>
         <ul className="py-0">
           {filteredUsers &&
-            filteredUsers.map((name) => <li className="py-0">{name}</li>)}
+            filteredUsers.map((name, i) => <li className="py-0" key={i}>{name}</li>)}
         </ul>
       </div>
     </>

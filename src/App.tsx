@@ -8,6 +8,7 @@ import SearchFilter from './useCallbackHook/searchFilter';
 import UseMemoHook from './useMemoHook/mainMemo';
 import ReducerHook from './useReducerHook/reducerHook';
 import ImperativeHandelHook from './useImperativeHandle/useIMperativeHook';
+import UseTransition from './useTransition/useTransitionHook';
 
 function App() {
   const [user] = useState<User>({
@@ -34,6 +35,9 @@ function App() {
               <ReducerHook />
               <br />
               <ImperativeHandelHook />
+              <br />
+             <UseTransition />
+             <br /><br /><br />
             </userContext.Provider>
           </div>
         </div>
