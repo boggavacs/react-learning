@@ -1,4 +1,4 @@
-Table of conent
+Table of content
 -------------------
 1. react basics
 2. react hooks
