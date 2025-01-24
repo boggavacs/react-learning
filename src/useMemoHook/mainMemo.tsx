@@ -1,12 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MemoChildComponent from './childComponent';
 
 export default function UseMemoHook() {
-  let user: Person = {
-    name: 'Some Person',
-  };
-
-  const [userName, setUserName] = useState<Person>(user);
+  
+  const [userName, setUserName] = useState<Person>({});
   const [number, setNumber] = useState(0);
 
   const handelIncrease = () => {
@@ -16,6 +13,10 @@ export default function UseMemoHook() {
   const handelDecrease = () => {
     setNumber(number - 1);
   };
+
+  useEffect(() => {
+    setUserName({ name: 'Some Person' });
+  } ,[]);
 
   return (
     <>
@@ -37,5 +38,5 @@ export default function UseMemoHook() {
 }
 
 export interface Person {
-  name: string;
+  name?: string;
 }

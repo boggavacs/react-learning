@@ -8,6 +8,7 @@ export interface ResetCounter {
 
 const ImpartiveChildComponent = (props: ChildProps, ref:Ref<ResetCounter>) => {
   const [count, setCount] = useState(0);
+  const {} = props;
 
   const reset = () => {
     setCount(0);

@@ -19,7 +19,7 @@ const Blog = () => {
       });
   }
 
-  const [blogs, setBlogs] = useState<BlogsPost>(BlogPostArray);
+  const [blogs] = useState<BlogsPost>(BlogPostArray);
 
   return (
     <div>
