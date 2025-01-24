@@ -1,0 +1,16 @@
+# filepath: /home/shekar/Documents/workspace/react-learning/docker-compose.yml
+version: '3.8'
+
+services:
+  react-app:
+    build: .
+    ports:
+      - "4001:4001"
+    environment:
+      - PORT=4001
+    networks:
+      - react-network
+
+networks:
+  react-network:
+    driver: bridge
